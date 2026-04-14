@@ -5,12 +5,10 @@ public class Vessel {
     private double averageSpeed;
     private String vesselType;
 
-    // No argument constructor
     public Vessel() {
 
     }
 
-    // Parameterized constructor
     public Vessel(String vesselId, String vesselName,
                   double averageSpeed, String vesselType) {
 
