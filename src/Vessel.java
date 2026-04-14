@@ -6,10 +6,13 @@ public class Vessel {
     private String vesselType;
 
     public Vessel() {
+
     }
 
-    public Vessel(String vesselId, String vesselName,
-                  double averageSpeed, String vesselType) {
+    public Vessel(String vesselId,
+                  String vesselName,
+                  double averageSpeed,
+                  String vesselType) {
 
         this.vesselId = vesselId;
         this.vesselName = vesselName;
@@ -47,5 +50,18 @@ public class Vessel {
 
     public void setVesselType(String vesselType) {
         this.vesselType = vesselType;
+    }
+
+    @Override
+    public String toString() {
+
+        return vesselId
+                + " | "
+                + vesselName
+                + " | "
+                + vesselType
+                + " | "
+                + averageSpeed
+                + " knots";
     }
 }
