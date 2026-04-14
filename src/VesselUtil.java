@@ -32,4 +32,30 @@ public class VesselUtil {
 
         return null;
     }
+
+    // UC4
+    public List<Vessel> getHighPerformanceVessels() {
+
+        List<Vessel> result = new ArrayList<>();
+
+        double maxSpeed = 0;
+
+        for (Vessel v : vesselList) {
+
+            if (v.getAverageSpeed() > maxSpeed) {
+
+                maxSpeed = v.getAverageSpeed();
+            }
+        }
+
+        for (Vessel v : vesselList) {
+
+            if (v.getAverageSpeed() == maxSpeed) {
+
+                result.add(v);
+            }
+        }
+
+        return result;
+    }
 }
