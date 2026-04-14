@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VesselUtil {
 
@@ -12,45 +13,23 @@ public class VesselUtil {
         this.vesselList = vesselList;
     }
 
-    // Requirement 1
+    // UC2
     public void addVesselPerformance(Vessel vessel) {
+
         vesselList.add(vessel);
     }
 
-    // Requirement 2
+    // UC3
     public Vessel getVesselById(String vesselId) {
 
         for (Vessel v : vesselList) {
 
             if (v.getVesselId().equals(vesselId)) {
+
                 return v;
             }
         }
 
         return null;
-    }
-
-    // Requirement 3
-    public List<Vessel> getHighPerformanceVessels() {
-
-        List<Vessel> result = new ArrayList<>();
-
-        double maxSpeed = 0;
-
-        for (Vessel v : vesselList) {
-
-            if (v.getAverageSpeed() > maxSpeed) {
-                maxSpeed = v.getAverageSpeed();
-            }
-        }
-
-        for (Vessel v : vesselList) {
-
-            if (v.getAverageSpeed() == maxSpeed) {
-                result.add(v);
-            }
-        }
-
-        return result;
     }
 }
