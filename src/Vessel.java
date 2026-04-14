@@ -6,7 +6,6 @@ public class Vessel {
     private String vesselType;
 
     public Vessel() {
-
     }
 
     public Vessel(String vesselId, String vesselName,
